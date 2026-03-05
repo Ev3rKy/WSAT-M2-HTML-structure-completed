@@ -1,7 +1,8 @@
+import Card from "./Card";
+
 function About() {
   return (
-    <section id="about" className="card">
-      <h2>About Me</h2>
+    <Card title="About Me">
       <p>An IT student, studying at USTP.</p>
       <div style={{ textAlign: "center", margin: "15px 0" }}>
         <img
@@ -23,7 +24,7 @@ function About() {
           github.com
         </a>
       </p>
-    </section>
+    </Card>
   );
 }
 

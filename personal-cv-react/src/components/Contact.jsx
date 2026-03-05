@@ -10,7 +10,7 @@ function Contact() {
     if (name === "" || email === "") {
       alert("Please fill in all required fields.");
     } else {
-      alert("Form submitted successfully!");
+      alert(`Thank you ${name}!`);  // ← only this line changes
       setName("");
       setEmail("");
       setMessage("");

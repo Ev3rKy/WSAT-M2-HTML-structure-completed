@@ -1,33 +1,6 @@
-function Education() {
-  const educationData = [
-    {
-      level: "Tertiary",
-      program: "Bachelor Science of Information Technology",
-      institution: "USTP – CDO Campus",
-      year: "2028",
-    },
-    {
-      level: "Upper Secondary",
-      program: "STEM-ACAD",
-      institution: "PHINMA COC – Carmen Campus",
-      year: "2023",
-    },
-    {
-      level: "Secondary",
-      program: "NONE",
-      institution: "PHINMA COC – Carmen Campus",
-      year: "2021",
-    },
-    {
-      level: "Primary",
-      program: "NONE",
-      institution: "Liceo De Cagayan University",
-      year: "2017",
-    },
-  ];
-
+function Education({ education }) {
   return (
-    <section id="education" className="card">
+    <section className="card">
       <h2>Education</h2>
       <table border="1" cellPadding="3" cellSpacing="0">
         <thead>
@@ -39,12 +12,12 @@ function Education() {
           </tr>
         </thead>
         <tbody>
-          {educationData.map((row, index) => (
+          {education.map((item, index) => (
             <tr key={index}>
-              <td>{row.level}</td>
-              <td>{row.program}</td>
-              <td>{row.institution}</td>
-              <td>{row.year}</td>
+              <td>{item.educationlevel}</td>
+              <td>{item.program}</td>
+              <td>{item.school}</td>
+              <td>{item.year}</td>
             </tr>
           ))}
         </tbody>
