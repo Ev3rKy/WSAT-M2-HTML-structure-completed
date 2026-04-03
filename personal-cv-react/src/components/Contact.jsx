@@ -10,7 +10,22 @@ function Contact() {
     if (name === "" || email === "") {
       alert("Please fill in all required fields.");
     } else {
-      alert(`Thank you ${name}!`);  // ← only this line changes
+      fetch("http://localhost/cv-api/process.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name: name })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.message) {
+            alert(data.message);
+          } else {
+            alert("Unexpected error occurred.");
+          }
+        });
+
       setName("");
       setEmail("");
       setMessage("");
