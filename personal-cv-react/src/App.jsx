@@ -4,6 +4,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import ContactList from "./ContactList"; // ← ADD THIS
 
 function App() {
 const [darkMode, setDarkMode] = useState(false);
@@ -26,6 +27,7 @@ const education = [
           <Skills skills={skills} />
           <Education education={education} />
           <Contact />
+          <ContactList /> {/* ← ADD THIS */}
         </main>
       </div>
       <footer style={{ textAlign: "center", padding: "20px" }}>
